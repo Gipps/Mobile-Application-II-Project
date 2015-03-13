@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>10C6CD88-0177-48BB-A5E6-18EEA9A08F18</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Mobile Application II Project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>57965E895828649B544E7289B790B47C2410FF73</key>
+		<string>https://github.com/kaliaev/Mobile-Application-II-Project.git</string>
+		<key>6C3C9B4B86C795EEA8CD80BFE860CF08B08DD194</key>
+		<string>https://github.com/RusticiSoftware/TinCanObjC.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Mobile Application II Project.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>57965E895828649B544E7289B790B47C2410FF73</key>
+		<string>../..</string>
+		<key>6C3C9B4B86C795EEA8CD80BFE860CF08B08DD194</key>
+		<string>../../../../../../../Volumes/DOCS/TinCanObjC</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kaliaev/Mobile-Application-II-Project.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>57965E895828649B544E7289B790B47C2410FF73</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>57965E895828649B544E7289B790B47C2410FF73</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Mobile%20Application%20II%20Project</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6C3C9B4B86C795EEA8CD80BFE860CF08B08DD194</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TinCanObjC</string>
+		</dict>
+	</array>
+</dict>
+</plist>

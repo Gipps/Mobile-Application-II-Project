@@ -7,18 +7,24 @@
 //
 
 #import "ViewController.h"
+#import "RSTinCanConnector.h"
+#import "TCLRS.h"
+#import "RSTinCanOfflineConnector.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    NSDictionary *options;
+}
 
 @end
-NSMutableDictionary *lrs;
+
+RSTinCanConnector* connector;
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    lrs = [ [NSMutableDictionary alloc] init];
-    [lrs setValue:@"https://cloud.scorm.com/tc/24YOP10U8J/" forKey:@"endpoint"];
+   
 }
 
 - (void)didReceiveMemoryWarning {
