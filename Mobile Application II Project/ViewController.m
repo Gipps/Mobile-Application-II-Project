@@ -32,6 +32,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    _textPasswd.secureTextEntry = YES;
+    
     NSError *err = nil;
     
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"arrayList" ofType:@"json"];
@@ -40,7 +44,7 @@
     
     NSArray *statements = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath] options:kNilOptions error:&err];
     
-    NSLog(@"Transaction list: %@", statements);
+    //NSLog(@"Transaction list: %@", statements);
     NSLog(@"Error list: %@", err);
 
     

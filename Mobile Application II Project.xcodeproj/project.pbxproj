@@ -14,6 +14,10 @@
 		F44394D81AB3668800C1D4F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44394D71AB3668800C1D4F5 /* Images.xcassets */; };
 		F44394DB1AB3668800C1D4F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44394D91AB3668800C1D4F5 /* LaunchScreen.xib */; };
 		F44394E71AB3668800C1D4F5 /* Mobile_Application_II_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F44394E61AB3668800C1D4F5 /* Mobile_Application_II_ProjectTests.m */; };
+		F467E5FB1AD1F6A700EA6C96 /* Statements.m in Sources */ = {isa = PBXBuildFile; fileRef = F467E5FA1AD1F6A700EA6C96 /* Statements.m */; };
+		F467E5FE1AD1F80900EA6C96 /* DisplayStatements.m in Sources */ = {isa = PBXBuildFile; fileRef = F467E5FD1AD1F80900EA6C96 /* DisplayStatements.m */; };
+		F467E6011AD1F87C00EA6C96 /* DownloadAndDisplayStatements.m in Sources */ = {isa = PBXBuildFile; fileRef = F467E6001AD1F87C00EA6C96 /* DownloadAndDisplayStatements.m */; };
+		F467E6051AD1FB2D00EA6C96 /* Statement.m in Sources */ = {isa = PBXBuildFile; fileRef = F467E6041AD1FB2D00EA6C96 /* Statement.m */; };
 		F48DF8CD1AD1C8C2009BF024 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F48DF8CC1AD1C8C2009BF024 /* libsqlite3.dylib */; };
 		F48E64C31AD1BE25006E411C /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F48E64C21AD1BE25006E411C /* DBManager.m */; };
 		F48E64C51AD1C270006E411C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48E64C41AD1C270006E411C /* MapKit.framework */; };
@@ -58,6 +62,14 @@
 		F44394E01AB3668800C1D4F5 /* Mobile Application II ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Application II ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44394E51AB3668800C1D4F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F44394E61AB3668800C1D4F5 /* Mobile_Application_II_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mobile_Application_II_ProjectTests.m; sourceTree = "<group>"; };
+		F467E5F91AD1F6A700EA6C96 /* Statements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statements.h; sourceTree = "<group>"; };
+		F467E5FA1AD1F6A700EA6C96 /* Statements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Statements.m; sourceTree = "<group>"; };
+		F467E5FC1AD1F80900EA6C96 /* DisplayStatements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayStatements.h; sourceTree = "<group>"; };
+		F467E5FD1AD1F80900EA6C96 /* DisplayStatements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayStatements.m; sourceTree = "<group>"; };
+		F467E5FF1AD1F87C00EA6C96 /* DownloadAndDisplayStatements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadAndDisplayStatements.h; path = ../DownloadAndDisplayStatements.h; sourceTree = "<group>"; };
+		F467E6001AD1F87C00EA6C96 /* DownloadAndDisplayStatements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadAndDisplayStatements.m; path = ../DownloadAndDisplayStatements.m; sourceTree = "<group>"; };
+		F467E6031AD1FB2D00EA6C96 /* Statement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statement.h; sourceTree = "<group>"; };
+		F467E6041AD1FB2D00EA6C96 /* Statement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Statement.m; sourceTree = "<group>"; };
 		F48DF8CC1AD1C8C2009BF024 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		F48E64C11AD1BE25006E411C /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		F48E64C21AD1BE25006E411C /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
@@ -119,6 +131,7 @@
 				F44394D71AB3668800C1D4F5 /* Images.xcassets */,
 				F44394D91AB3668800C1D4F5 /* LaunchScreen.xib */,
 				F44394CA1AB3668800C1D4F5 /* Supporting Files */,
+				F467E6021AD1F8E700EA6C96 /* Statements */,
 			);
 			path = "Mobile Application II Project";
 			sourceTree = "<group>";
@@ -147,6 +160,21 @@
 				F44394E51AB3668800C1D4F5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F467E6021AD1F8E700EA6C96 /* Statements */ = {
+			isa = PBXGroup;
+			children = (
+				F467E6031AD1FB2D00EA6C96 /* Statement.h */,
+				F467E6041AD1FB2D00EA6C96 /* Statement.m */,
+				F467E5F91AD1F6A700EA6C96 /* Statements.h */,
+				F467E5FA1AD1F6A700EA6C96 /* Statements.m */,
+				F467E5FC1AD1F80900EA6C96 /* DisplayStatements.h */,
+				F467E5FD1AD1F80900EA6C96 /* DisplayStatements.m */,
+				F467E5FF1AD1F87C00EA6C96 /* DownloadAndDisplayStatements.h */,
+				F467E6001AD1F87C00EA6C96 /* DownloadAndDisplayStatements.m */,
+			);
+			name = Statements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +286,12 @@
 			files = (
 				F44394D31AB3668800C1D4F5 /* ViewController.m in Sources */,
 				F44394D01AB3668800C1D4F5 /* AppDelegate.m in Sources */,
+				F467E5FE1AD1F80900EA6C96 /* DisplayStatements.m in Sources */,
+				F467E6051AD1FB2D00EA6C96 /* Statement.m in Sources */,
 				F44394CD1AB3668800C1D4F5 /* main.m in Sources */,
+				F467E6011AD1F87C00EA6C96 /* DownloadAndDisplayStatements.m in Sources */,
 				F48E64C31AD1BE25006E411C /* DBManager.m in Sources */,
+				F467E5FB1AD1F6A700EA6C96 /* Statements.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
