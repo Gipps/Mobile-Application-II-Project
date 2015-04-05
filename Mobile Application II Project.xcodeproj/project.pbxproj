@@ -14,6 +14,8 @@
 		F44394D81AB3668800C1D4F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44394D71AB3668800C1D4F5 /* Images.xcassets */; };
 		F44394DB1AB3668800C1D4F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44394D91AB3668800C1D4F5 /* LaunchScreen.xib */; };
 		F44394E71AB3668800C1D4F5 /* Mobile_Application_II_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F44394E61AB3668800C1D4F5 /* Mobile_Application_II_ProjectTests.m */; };
+		F48E64C31AD1BE25006E411C /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F48E64C21AD1BE25006E411C /* DBManager.m */; };
+		F48E64C51AD1C270006E411C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48E64C41AD1C270006E411C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		F44394E01AB3668800C1D4F5 /* Mobile Application II ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Application II ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44394E51AB3668800C1D4F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F44394E61AB3668800C1D4F5 /* Mobile_Application_II_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mobile_Application_II_ProjectTests.m; sourceTree = "<group>"; };
+		F48E64C11AD1BE25006E411C /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		F48E64C21AD1BE25006E411C /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		F48E64C41AD1C270006E411C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48E64C51AD1C270006E411C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		F44394BE1AB3668800C1D4F5 = {
 			isa = PBXGroup;
 			children = (
+				F48E64C41AD1C270006E411C /* MapKit.framework */,
 				F44394C91AB3668800C1D4F5 /* Mobile Application II Project */,
 				F44394E31AB3668800C1D4F5 /* Mobile Application II ProjectTests */,
 				F44394C81AB3668800C1D4F5 /* Products */,
@@ -86,6 +93,8 @@
 				F44394D11AB3668800C1D4F5 /* ViewController.h */,
 				F44394D21AB3668800C1D4F5 /* ViewController.m */,
 				F44394D41AB3668800C1D4F5 /* Main.storyboard */,
+				F48E64C11AD1BE25006E411C /* DBManager.h */,
+				F48E64C21AD1BE25006E411C /* DBManager.m */,
 				F44394D71AB3668800C1D4F5 /* Images.xcassets */,
 				F44394D91AB3668800C1D4F5 /* LaunchScreen.xib */,
 				F44394CA1AB3668800C1D4F5 /* Supporting Files */,
@@ -168,6 +177,11 @@
 				TargetAttributes = {
 					F44394C61AB3668800C1D4F5 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F44394DF1AB3668800C1D4F5 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -222,6 +236,7 @@
 				F44394D31AB3668800C1D4F5 /* ViewController.m in Sources */,
 				F44394D01AB3668800C1D4F5 /* AppDelegate.m in Sources */,
 				F44394CD1AB3668800C1D4F5 /* main.m in Sources */,
+				F48E64C31AD1BE25006E411C /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

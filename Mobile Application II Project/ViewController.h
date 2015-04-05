@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate, NSURLSessionDelegate>
-
-@property AFURLSessionManager* manager;
-
+@interface ViewController : UIViewController
 @end
 
