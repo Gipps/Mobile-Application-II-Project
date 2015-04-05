@@ -33,7 +33,7 @@ static sqlite3_stmt *statement = nil;
     
     docDir = dirPaths[0];
 
-    self.databasePath = [[NSString alloc]initWithString:[docDir stringByAppendingString:@"student.db"]];
+    self.databasePath = [[NSString alloc]initWithString:[docDir stringByAppendingString:@"statements.db"]];
     
     BOOL isSuccess = YES;
     

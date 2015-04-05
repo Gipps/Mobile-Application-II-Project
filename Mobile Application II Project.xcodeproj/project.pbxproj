@@ -17,6 +17,8 @@
 		F48DF8CD1AD1C8C2009BF024 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F48DF8CC1AD1C8C2009BF024 /* libsqlite3.dylib */; };
 		F48E64C31AD1BE25006E411C /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F48E64C21AD1BE25006E411C /* DBManager.m */; };
 		F48E64C51AD1C270006E411C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48E64C41AD1C270006E411C /* MapKit.framework */; };
+		F4E83ECD1AD1EF7F00055A9D /* arrayList.json in Resources */ = {isa = PBXBuildFile; fileRef = F4E83ECC1AD1EF7F00055A9D /* arrayList.json */; };
+		F4E83ECF1AD1EFF300055A9D /* arrayList.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = F4E83ECC1AD1EF7F00055A9D /* arrayList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,19 @@
 			remoteInfo = "Mobile Application II Project";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4E83ECE1AD1EFE800055A9D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				F4E83ECF1AD1EFF300055A9D /* arrayList.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F44394C71AB3668800C1D4F5 /* Mobile Application II Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Application II Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +62,7 @@
 		F48E64C11AD1BE25006E411C /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		F48E64C21AD1BE25006E411C /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		F48E64C41AD1C270006E411C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F4E83ECC1AD1EF7F00055A9D /* arrayList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = arrayList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +93,7 @@
 				F44394C91AB3668800C1D4F5 /* Mobile Application II Project */,
 				F44394E31AB3668800C1D4F5 /* Mobile Application II ProjectTests */,
 				F44394C81AB3668800C1D4F5 /* Products */,
+				F4E83ECC1AD1EF7F00055A9D /* arrayList.json */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +159,7 @@
 				F44394C31AB3668800C1D4F5 /* Sources */,
 				F44394C41AB3668800C1D4F5 /* Frameworks */,
 				F44394C51AB3668800C1D4F5 /* Resources */,
+				F4E83ECE1AD1EFE800055A9D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -218,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F44394D61AB3668800C1D4F5 /* Main.storyboard in Resources */,
+				F4E83ECD1AD1EF7F00055A9D /* arrayList.json in Resources */,
 				F44394DB1AB3668800C1D4F5 /* LaunchScreen.xib in Resources */,
 				F44394D81AB3668800C1D4F5 /* Images.xcassets in Resources */,
 			);

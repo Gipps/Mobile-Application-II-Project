@@ -109,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="997" y="536"/>
         </scene>
-        <!--Item 1-->
+        <!--List of statements-->
         <scene sceneID="5T0-NO-yew">
             <objects>
                 <viewController id="ARR-2o-yzX" sceneMemberID="viewController">
@@ -128,7 +128,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Emf-YD-jX1"/>
+                    <tabBarItem key="tabBarItem" title="List of statements" id="Emf-YD-jX1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75X-F7-8Oe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,11 +154,11 @@
             </objects>
             <point key="canvasLocation" x="196" y="246"/>
         </scene>
-        <!--Item 2-->
+        <!--Location service-->
         <scene sceneID="IK5-b2-3P7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SUh-wd-YFr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="29B-y2-8pU"/>
+                    <tabBarItem key="tabBarItem" title="Location service" id="29B-y2-8pU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bcr-25-UBe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -189,7 +189,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOv-bP-IpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-697" y="246"/>
+            <point key="canvasLocation" x="-561" y="246"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
