@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+   
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     _textPasswd.secureTextEntry = YES;
@@ -40,12 +40,22 @@
     
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"arrayList" ofType:@"json"];
     
-    NSLog(@"Hello: %@", dataPath);
+    NSLog(@"JSON Path: %@", dataPath);
     
-    NSArray *statements = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath] options:kNilOptions error:&err];
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath] options:kNilOptions error:&err];
     
-    //NSLog(@"Transaction list: %@", statements);
-    NSLog(@"Error list: %@", err);
+    NSArray* statements = [json objectForKey:@"statements"];
+    NSDictionary* statement = [statements objectAtIndex:0];
+    
+    NSString* actor = [[statement objectForKey:@"actor"] objectForKey:@"objectType"];
+    NSString* verb = [[[statement objectForKey:@"verb"] objectForKey:@"display"] objectForKey:@"en-US"];
+    NSString* object = [[[[statement objectForKey:@"object"] objectForKey:@"definition"] objectForKey:@"description"] objectForKey:@"en-US"];
+    
+    NSLog(@"Statement list: %@", statement);
+    NSLog(@"Actor list: %@", actor);
+    NSLog(@"Verb list: %@", verb);
+    NSLog(@"Object list: %@", object);
+
 
     
 }

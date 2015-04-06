@@ -8,6 +8,6 @@
 
 #import "DownloadAndDisplayStatements.h"
 
-@implementation DownloadAndDisplayStatements
+@implementation Statements(DownloadAndDisplayStatements)
 
 @end
