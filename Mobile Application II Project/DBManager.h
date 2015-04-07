@@ -14,7 +14,7 @@
 +(DBManager*)getSharedInstance;
 
 -(BOOL)createDB;
--(BOOL)saveData:(NSString*)regNum name:(NSString*)name department:(NSString*)department year:(NSString*)year;
--(NSArray*)findByRegNumber:(NSString*)regNum;
+-(BOOL)saveData:(NSString*)_id actor:(NSString*)actor verb:(NSString*)verb object:(NSString*)object;
+-(NSArray*)findById:(NSString*)_id;
 
 @end

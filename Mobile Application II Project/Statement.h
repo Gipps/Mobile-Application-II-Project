@@ -13,5 +13,7 @@
 @property (strong, nonatomic) NSString* actor;
 @property (strong, nonatomic) NSString* verb;
 @property (strong, nonatomic) NSString* object;
+@property (strong, nonatomic) NSString* iD;
+@property (strong, nonatomic) NSString* timestamp;
 
 @end

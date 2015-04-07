@@ -10,4 +10,11 @@
 
 @implementation Statements
 
+-(id)init{
+    self = [super init];
+    if(self){
+        _statements = nil;
+    }
+    return self;
+}
 @end

@@ -15,7 +15,7 @@ static sqlite3_stmt *statement = nil;
 
 @implementation DBManager
 +(DBManager*)getSharedInstance{
-
+    
     if (!sharedInstance) {
         sharedInstance = [[super allocWithZone:NULL]init];
         [sharedInstance createDB];
@@ -28,7 +28,7 @@ static sqlite3_stmt *statement = nil;
 
     NSString* docDir;
     NSArray* dirPaths;
-
+    
     dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
     
     docDir = dirPaths[0];
@@ -45,7 +45,7 @@ static sqlite3_stmt *statement = nil;
         if (sqlite3_open(dbpath, &database)==SQLITE_OK) {
             
             char* errMsg;
-            char* sql_stmt = "create table if not exists student(regNo integer primary key, name text, department text, year text)";
+            char* sql_stmt = "create table if not exists statements(id text primary key, actor text, verb text, object text)";
             
             if (sqlite3_exec(database, sql_stmt, NULL, NULL, &errMsg)!=SQLITE_OK) {
                 isSuccess = NO;
@@ -62,13 +62,13 @@ static sqlite3_stmt *statement = nil;
     return isSuccess;
     
 }
--(BOOL)saveData:(NSString*)regNum name:(NSString*)name department:(NSString*)department year:(NSString*)year{
+-(BOOL)saveData:(NSString*)id actor:(NSString*)actor verb:(NSString*)verb object:(NSString*)object{
 
     const char* dbpath = [self.databasePath UTF8String];
     BOOL isSuccess = YES;
     if (sqlite3_open(dbpath, &database)==SQLITE_OK) {
         
-        NSString* insertSQL = [NSString stringWithFormat:@"insert into student(regNo, name, department, year) values (\"%d\", \"%@\", \"%@\", \"%@\")",[regNum intValue], name, department, year];
+        NSString* insertSQL = [NSString stringWithFormat:@"insert into statements(id, actor, verb, object) values (\"%@\", \"%@\", \"%@\", \"%@\")",id , actor, verb, object];
         
         const char* sql_stmt = [insertSQL UTF8String];
         
@@ -95,7 +95,7 @@ static sqlite3_stmt *statement = nil;
     return isSuccess;
 }
 
--(NSArray*)findByRegNumber:(NSString*)regNum{
+-(NSArray*)findById:(NSString*)_id{
     BOOL isSuccess = YES;
     NSMutableArray* result = nil;
     
@@ -103,20 +103,20 @@ static sqlite3_stmt *statement = nil;
     
     if (sqlite3_open(dbpath, &database)==SQLITE_OK) {
         
-        NSString* query = [NSString stringWithFormat:@"select name, department, year from student where regNo=\"%@\"", regNum];
+        NSString* query = [NSString stringWithFormat:@"select id, verb, object from statements where id=\"%@\"", _id];
         
         const char* sql_stmt = [query UTF8String];
         if (sqlite3_prepare_v2(database, sql_stmt, -1, &statement, NULL)==SQLITE_OK) {
             if (sqlite3_step(statement)==SQLITE_ROW) {
                 
                 result = [NSMutableArray new];
-                NSString* name = [[NSString alloc]initWithUTF8String:(const char*)sqlite3_column_text(statement, 0)];
-                NSString* department = [[NSString alloc]initWithUTF8String:(const char*)sqlite3_column_text(statement, 1)];
-                NSString* year = [[NSString alloc]initWithUTF8String:(const char*)sqlite3_column_text(statement, 2)];
+                NSString* actor = [[NSString alloc]initWithUTF8String:(const char*)sqlite3_column_text(statement, 0)];
+                NSString* verb = [[NSString alloc]initWithUTF8String:(const char*)sqlite3_column_text(statement, 1)];
+                NSString* object = [[NSString alloc]initWithUTF8String:(const char*)sqlite3_column_text(statement, 2)];
                 
-                [result addObject:name];
-                [result addObject:department];
-                [result addObject:year];
+                [result addObject:actor];
+                [result addObject:verb];
+                [result addObject:object];
                 
             }else{
                 isSuccess=NO;
