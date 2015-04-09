@@ -8,6 +8,7 @@
 
 #import "DownloadAndDisplayStatements.h"
 
-@implementation Statements(DownloadAndDisplayStatements)
-
+@implementation DisplayStatements(DownloadAndDisplayStatements)
+-(void)DownloadAndLoadJSON{    
+}
 @end
