@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "DisplayStatements.h"
 
-@interface DisplayStatements(DownloadAndDisplayStatements)
--(void)DownloadAndLoadJSON;
+@interface Statements(DownloadAndDisplayStatements)
+
 @end

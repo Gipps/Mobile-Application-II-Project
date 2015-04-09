@@ -16,7 +16,7 @@
         _actor = nil;
         _verb = nil;
         _object = nil;
-        __id = nil;
+        _iD = nil;
         _timestamp = nil;
     }
     return self;

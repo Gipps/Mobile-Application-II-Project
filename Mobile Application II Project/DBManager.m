@@ -29,22 +29,23 @@ static sqlite3_stmt *statement = nil;
     NSString* docDir;
     NSArray* dirPaths;
     
-    
     dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
     
     docDir = dirPaths[0];
-    self.databasePath = [[NSString alloc]initWithString:[docDir stringByAppendingString:@"statements.db"]];
-    const char* dbpath = [self.databasePath UTF8String];
 
+    self.databasePath = [[NSString alloc]initWithString:[docDir stringByAppendingString:@"statements.db"]];
+    
     BOOL isSuccess = YES;
     
     NSFileManager *filemgr = [NSFileManager defaultManager];
     
     if ([filemgr fileExistsAtPath:self.databasePath]==NO) {
+        const char* dbpath = [self.databasePath UTF8String];
+        
         if (sqlite3_open(dbpath, &database)==SQLITE_OK) {
             
             char* errMsg;
-            char* sql_stmt = "create table if not exists statements(_id text primary key, actor text, verb text, object text)";
+            char* sql_stmt = "create table if not exists statements(id text primary key, actor text, verb text, object text)";
             
             if (sqlite3_exec(database, sql_stmt, NULL, NULL, &errMsg)!=SQLITE_OK) {
                 isSuccess = NO;
@@ -61,17 +62,17 @@ static sqlite3_stmt *statement = nil;
     return isSuccess;
     
 }
--(BOOL)saveData:(NSString*)_id actor:(NSString*)actor verb:(NSString*)verb object:(NSString*)object{
+-(BOOL)saveData:(NSString*)id actor:(NSString*)actor verb:(NSString*)verb object:(NSString*)object{
 
-    const char* path = [self.databasePath UTF8String];
+    const char* dbpath = [self.databasePath UTF8String];
     BOOL isSuccess = YES;
-    if (sqlite3_open(path, &database)==SQLITE_OK) {
+    if (sqlite3_open(dbpath, &database)==SQLITE_OK) {
         
-        NSString* insertSQL = [NSString stringWithFormat:@"insert into statements( _id, actor, verb, object) values (\"%@\", \"%@\", \"%@\", \"%@\")", _id, actor, verb, object];
+        NSString* insertSQL = [NSString stringWithFormat:@"insert into statements(id, actor, verb, object) values (\"%@\", \"%@\", \"%@\", \"%@\")",id , actor, verb, object];
         
-        const char* s = [insertSQL UTF8String];
+        const char* sql_stmt = [insertSQL UTF8String];
         
-        if(sqlite3_prepare_v2(database, s, -1, &statement,NULL)==SQLITE_OK){
+        if(sqlite3_prepare_v2(database, sql_stmt, -1, &statement,NULL)==SQLITE_OK){
             if (sqlite3_step(statement)==SQLITE_DONE) {
                 isSuccess = YES;
             }else{
@@ -102,7 +103,7 @@ static sqlite3_stmt *statement = nil;
     
     if (sqlite3_open(dbpath, &database)==SQLITE_OK) {
         
-        NSString* query = [NSString stringWithFormat:@"select _id, verb, object from statements where _id=\"%@\"", _id];
+        NSString* query = [NSString stringWithFormat:@"select id, verb, object from statements where id=\"%@\"", _id];
         
         const char* sql_stmt = [query UTF8String];
         if (sqlite3_prepare_v2(database, sql_stmt, -1, &statement, NULL)==SQLITE_OK) {

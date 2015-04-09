@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Statements.h"
 
-@interface DisplayStatements : NSObject 
--(void)loadJSON;
+@interface Statements(DisplayStatements)
+
+
 @end
